@@ -1,1 +1,1 @@
-We collect project ideas in the Wiki. 
+We collect project ideas in the [[Wiki]]. 
