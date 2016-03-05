@@ -39,9 +39,6 @@ sudo apt-get --yes --force-yes install ruby2.1-dev ruby2.2-dev ruby2.3-dev
 # We want te be able to easily switch between Ruby versions
 sudo apt-get --yes --force-yes install ruby-switch
 
-# We set latest stable Ruby, i.e. 2.3 as default
-sudo ruby-switch --set ruby2.3
-
 # Let's install bundler in all three ruby versions
 sudo gem2.1 install bundler
 sudo gem2.2 install bundler
@@ -74,3 +71,6 @@ sudo apt-get --yes --force-yes install zeal
 
 # Let's install Atom editor
 sudo apt-get --yes --force-yes install atom
+
+# We set latest stable Ruby, i.e. 2.3 as default
+sudo ruby-switch --set ruby2.3
