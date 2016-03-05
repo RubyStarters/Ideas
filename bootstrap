@@ -69,6 +69,7 @@ sudo ufw enable
 sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-server mysql-client
 
 # Let's install Zeal and a sane amount of documentation
+# well, if I only knew how to install docsets from the console ...
 sudo apt-get --yes --force-yes install zeal
 
 # Let's install Atom editor
