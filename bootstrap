@@ -62,4 +62,3 @@ sudo apt-get --yes --force-yes install zeal
 
 # Let's install Atom editor
 sudo apt-get --yes --force-yes install atom
-
