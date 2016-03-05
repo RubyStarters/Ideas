@@ -50,5 +50,3 @@ sudo ufw enable
 
 # Let's install Apache, MySQL and OpenSSH-Server, if we want to share data
 sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-server mysql-client
-
-
