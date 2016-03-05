@@ -22,6 +22,9 @@ sudo apt-get --yes --force-yes dist-upgrade
 # Installation of Google Chromium as second browser
 sudo apt-get --yes --force-yes install chromium-browser
 
+# We enable the firewall, because we will install server applications afterwards
+sudo ufw enable
+
 # Ruby prerequesites and tools: Bash, Curl, Git, C Compiler, OpenSSL, MySQL, Terminator, PostgresQL and several more
 sudo apt-get --yes --force-yes install bash curl git-core build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
 sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev curl git-core
@@ -58,9 +61,6 @@ sudo gem2.3 install sqlite3 pg mysql2
 sudo gem2.1 install devise paperclip
 sudo gem2.2 install devise paperclip
 sudo gem2.3 install devise paperclip
-
-# We enable the firewall, because we will install server applications afterwards
-sudo ufw enable
 
 # Let's install Apache, MySQL and OpenSSH-Server, if we want to share data
 sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-server mysql-client
