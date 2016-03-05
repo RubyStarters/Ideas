@@ -8,4 +8,4 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 
 # Installation of Google Chromium as second browser
-sudo apt-get install chromium browser
+sudo apt-get install chromium-browser
