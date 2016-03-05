@@ -1,0 +1,11 @@
+#! /bin/bash
+# The line above tells this script to be interpreted as a bash script when run from the command line.
+
+# Update of package information
+sudo apt-get update
+
+# Update all installed packages to ensure all security updates are obtained
+sudo apt-get dist-upgrade
+
+# Installation of Google Chromium as second browser
+sudo apt-get install chromium browser
