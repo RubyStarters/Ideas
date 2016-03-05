@@ -11,4 +11,8 @@ sudo apt-get --yes --force-yes dist-upgrade
 sudo apt-get --yes --force-yes install chromium-browser
 
 # Ruby prerequesites: Bash, Curl, Git, C Compiler, OpenSSL, MySQL, and several more
- sudo apt-get --yes --force-yes install bash curl git-core build-essential bison openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev curl git-core libyaml-dev libxslt-dev autoconf libmysqlclient-dev libreadline5 libltdl-dev libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config libffi-dev
+sudo apt-get --yes --force-yes install bash curl git-core build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
+sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev curl git-core
+sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libmysqlclient-dev libreadline5 libltdl-dev
+sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config libffi-dev
+sudo apt-get --yes --force-yes install libgmp3-dev
