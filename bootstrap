@@ -7,6 +7,12 @@ sudo apt-get --yes --force-yes install
 # Add Brightbox ruby repository
 sudo apt-add-repository ppa:brightbox/ruby-ng
 
+# Add repository for Zeal documentation browser
+sudo add-apt-repository ppa:zeal-developers/ppa
+
+# Add repository for Atom editor
+sudo add-apt-repository ppa:webupd8team/atom
+
 # Update of package information
 sudo apt-get update
 
@@ -16,12 +22,12 @@ sudo apt-get --yes --force-yes dist-upgrade
 # Installation of Google Chromium as second browser
 sudo apt-get --yes --force-yes install chromium-browser
 
-# Ruby prerequesites: Bash, Curl, Git, C Compiler, OpenSSL, MySQL, and several more
+# Ruby prerequesites and tools: Bash, Curl, Git, C Compiler, OpenSSL, MySQL, Terminator and several more
 sudo apt-get --yes --force-yes install bash curl git-core build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
 sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev curl git-core
 sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libmysqlclient-dev libreadline5 libltdl-dev
 sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config libffi-dev
-sudo apt-get --yes --force-yes install libgmp3-dev
+sudo apt-get --yes --force-yes install libgmp3-dev terminator
 
 # We install Ruby 2.1, 2.2 and 2.3 (to make sure older tutorials can be used as well)
 sudo apt-get --yes --force-yes install ruby2.1 ruby2.2 ruby2.3
@@ -50,3 +56,6 @@ sudo ufw enable
 
 # Let's install Apache, MySQL and OpenSSH-Server, if we want to share data
 sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-server mysql-client
+
+# Let's install Zeal and a sane amount of documentation
+sudo apt-get --yes --force-yes install zeal
