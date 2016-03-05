@@ -2,7 +2,7 @@
 # The line above tells this script to be interpreted as a bash script when run from the command line.
 
 # Make sure, we can add extra repositories
-sudo apt-get --yes --force-yes install 
+sudo apt-get --yes --force-yes install software-properties-common
 
 # Add Brightbox ruby repository
 sudo apt-add-repository ppa:brightbox/ruby-ng
