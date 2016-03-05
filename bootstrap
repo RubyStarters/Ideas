@@ -59,3 +59,7 @@ sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-s
 
 # Let's install Zeal and a sane amount of documentation
 sudo apt-get --yes --force-yes install zeal
+
+# Let's install Atom editor
+sudo apt-get --yes --force-yes install atom
+
