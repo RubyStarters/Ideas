@@ -36,7 +36,7 @@ sudo apt-get --yes --force-yes install ruby-switch
 sudo ruby-switch --set ruby2.3
 
 # Let's install bundler in all three ruby versions
-gem2.1 install bundler
-gem2.2 install bundler
-gem2.3 install bundler
+sudo gem2.1 install bundler
+sudo gem2.2 install bundler
+sudo gem2.3 install bundler
 
