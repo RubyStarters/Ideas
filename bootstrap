@@ -45,7 +45,6 @@ sudo gem2.1 install rails:'<4'
 sudo gem2.2 install rails:'<5'
 sudo gem2.3 install rails:'5'
 
-
 # We enable the firewall, because we will install server applications afterwards
 sudo ufw enable
 
