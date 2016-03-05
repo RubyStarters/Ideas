@@ -40,3 +40,9 @@ sudo gem2.1 install bundler
 sudo gem2.2 install bundler
 sudo gem2.3 install bundler
 
+# We enable the firewall, because we will install server applications afterwards
+sudo ufw enable
+
+# Let's install Apache, MySQL and OpenSSH-Server, if we want to share data
+sudo apt-get --yes --force-yes apt-get install apache2 mysql-server phpmyadmin openssh-server mysql-client
+
