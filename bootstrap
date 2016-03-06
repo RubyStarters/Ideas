@@ -10,6 +10,9 @@ sudo add-apt-repository ppa:zeal-developers/ppa
 echo -e "\n\e[96m === Add repository for Atom editor ===\e[0m"
 sudo add-apt-repository ppa:webupd8team/atom
 
+echo -e "\n\e[96m === Add repository for Sonic Pi ===\e[0m"
+sudo add-apt-repository ppa:sonic-pi/ppa
+
 echo -e "\n\e[96m === Update of package information ===\e[0m"
 sudo apt-get update
 
@@ -104,6 +107,9 @@ sudo apt-get --yes --force-yes install chromium-browser
 
 echo -e "\n\e[96m === Some tools for debugging networking, file changes and memory issues ===\e[0m"
 sudo apt-get --yes --force-yes install htop dstat meld
+
+echo -e "\n\e[96m === Sonic Pi ===\e[0m"
+sudo apt-get --yes --force-yes install sonic-pi
 
 echo -e "\n\e[96m === we are done! Have fun coding! ===\e[0m"
 
