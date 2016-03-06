@@ -46,7 +46,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 echo -e "\n\e[96m === ... and then rvm itself  ===\e[0m"
 \curl -sSL https://get.rvm.io | bash
 
-echo -e "\n\e[96m === Some Ubuntu flavours need more help sourcing rvm from termanials, but only if it's not already there  ===\e[0m"
+echo -e "\n\e[96m === Some Ubuntu flavours need more help sourcing rvm from terminals, but only if it's not already there  ===\e[0m"
 grep -q -F '/.rvm/scripts/rvm' ~/.bashrc || echo "source /home/$(whoami)/.rvm/scripts/rvm" >> ~/.bashrc
 
 echo -e "\n\e[96m === Furthermore we need to load it on the fly ===\e[0m"
