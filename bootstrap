@@ -4,9 +4,6 @@
 # Make sure, we can add extra repositories
 sudo apt-get --yes --force-yes install software-properties-common
 
-# Add Brightbox ruby repository
-sudo apt-add-repository ppa:brightbox/ruby-ng
-
 # Add repository for Zeal documentation browser
 sudo add-apt-repository ppa:zeal-developers/ppa
 
@@ -33,34 +30,40 @@ sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libt
 sudo apt-get --yes --force-yes install libffi-dev libgmp3-dev terminator libpq-dev postgresql-client postgresql
 sudo apt-get --yes --force-yes install postgresql-contrib pgadmin3
 
-# We install Ruby 2.1, 2.2 and 2.3 (to make sure older tutorials can be used as well)
-sudo apt-get --yes --force-yes install ruby2.1 ruby2.2 ruby2.3
+# We install rvm by first installing their public ssh-key
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+# and then rvm itself
+\curl -sSL https://get.rvm.io | bash
+# Some Ubuntu flavours need more help sourcing rvm from termanials, but only if it's not already there
+grep -q -F '/.rvm/scripts/rvm' ~/.bashrc || echo "source /home/$(whoami)/.rvm/scripts/rvm" >> ~/.bashrc
 
-# We want to be able to build gems using native extensions
-sudo apt-get --yes --force-yes install ruby2.1-dev ruby2.2-dev ruby2.3-dev
+# Let's install Ruby 2.1, 2.2 and 2.3
+rvm install ruby-2.1
+rvm install ruby-2.2
+rvm install ruby-2.3
 
-# We want te be able to easily switch between Ruby versions
-sudo apt-get --yes --force-yes install ruby-switch
+# We install bundler, 
+rvm use 2.1
+# .. latest Rails 3, ...
+gem2.1 install rails:'<4'
+# ... database support for SQLite, PostgresQL and MySQL, ...
+gem install bundler sqlite3 pg mysql2 
+# ... devise (authorization gem) and paperclip (attachment upload gem)
+gem install devise paperclip
 
-# Let's install bundler in all three ruby versions
-sudo gem2.1 install bundler
-sudo gem2.2 install bundler
-sudo gem2.3 install bundler
+# The same for Ruby 2.2, ...
+rvm use 2.2
+# .. but with latest Rails 4.
+gem2.1 install rails:'<4'
+gem install bundler sqlite3 pg mysql2 
+gem install devise paperclip
 
-# Let's install Rails 3,4,5 in Ruby 2.1, 2.2, 2.3 respectively
-sudo gem2.1 install rails:'<4'
-sudo gem2.2 install rails:'<5'
-sudo gem2.3 install rails -v 5.0.0.beta2
-
-# Let's install database support for SQLite, PostgresQL and MySQL
-sudo gem2.1 install sqlite3 pg mysql2
-sudo gem2.2 install sqlite3 pg mysql2
-sudo gem2.3 install sqlite3 pg mysql2
-
-# Let's install devise (authorization gem) and paperclip (attachment upload gem)
-sudo gem2.1 install devise paperclip
-sudo gem2.2 install devise paperclip
-sudo gem2.3 install devise paperclip
+# And one more time with Ruby 2.3, ...
+rvm use 2.3
+# .. but with latest Rails 5.
+gem2.1 install rails -v "5.0.0.beta2"
+gem install bundler sqlite3 pg mysql2 
+gem install devise paperclip
 
 # Let's install Apache, MySQL and OpenSSH-Server, if we want to share data
 sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-server mysql-client
@@ -73,4 +76,4 @@ sudo apt-get --yes --force-yes install zeal
 sudo apt-get --yes --force-yes install atom
 
 # We set latest stable Ruby, i.e. 2.3 as default
-sudo ruby-switch --set ruby2.3
+rvm --default use 2.3
