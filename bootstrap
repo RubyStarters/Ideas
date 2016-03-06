@@ -16,19 +16,30 @@ sudo apt-get update
 # Update all installed packages to ensure all security updates are obtained
 sudo apt-get --yes --force-yes dist-upgrade
 
-# Installation of Google Chromium as second browser
-sudo apt-get --yes --force-yes install chromium-browser
-
 # We enable the firewall, because we will install server applications afterwards
 sudo ufw enable
 
-# Ruby prerequesites and tools: Bash, Curl, Git, C Compiler, OpenSSL, MySQL, Terminator, PostgresQL and several more
-sudo apt-get --yes --force-yes install bash curl git-core build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
-sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev curl git-core
-sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libmysqlclient-dev libreadline5 libltdl-dev
+# Ruby prerequesites and tools: Bash, Curl, C Compiler, and several libraries to be able to install gems later
+sudo apt-get --yes --force-yes install bash curl build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
+sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libxml2-dev curl 
+sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libreadline5 libltdl-dev
 sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config 
-sudo apt-get --yes --force-yes install libffi-dev libgmp3-dev terminator libpq-dev postgresql-client postgresql
-sudo apt-get --yes --force-yes install postgresql-contrib pgadmin3
+sudo apt-get --yes --force-yes install libffi-dev libgmp3-dev libpq-dev 
+
+# SQLite database management system plus client
+sudo apt-get --yes --force-yes install libsqlite3-dev sqlite3
+
+# PostgresQL database management system plus client
+sudo apt-get --yes --force-yes install postgresql-client postgresql postgresql-contrib pgadmin3
+
+# Let's install Apache and OpenSSH-Server, if we want to share data
+sudo apt-get --yes --force-yes install apache2 openssh-server 
+
+# MYSQL database management system and client
+sudo apt-get --yes --force-yes install mysql-client libmysqlclient-dev mysql-server phpmyadmin
+
+# Git alongside a GUI application for it
+sudo apt-get --yes --force-yes install git git-core gitg 
 
 # We install rvm by first installing their public ssh-key
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -67,8 +78,8 @@ gem install rails -v "5.0.0.beta2"
 gem install bundler sqlite3 pg mysql2 
 gem install devise paperclip
 
-# Let's install Apache, MySQL and OpenSSH-Server, if we want to share data
-sudo apt-get --yes --force-yes install apache2 mysql-server phpmyadmin openssh-server mysql-client
+# We set latest stable Ruby, i.e. 2.3 as default
+rvm --default use 2.3
 
 # Let's install Zeal and a sane amount of documentation
 # well, if I only knew how to install docsets from the console ...
@@ -77,5 +88,8 @@ sudo apt-get --yes --force-yes install zeal
 # Let's install Atom editor
 sudo apt-get --yes --force-yes install atom
 
-# We set latest stable Ruby, i.e. 2.3 as default
-rvm --default use 2.3
+# Terminator is a way more powerfull terminal applicaton
+sudo apt-get --yes --force-yes install terminator
+
+# Installation of Google Chromium as second browser
+sudo apt-get --yes --force-yes install chromium-browser
