@@ -100,8 +100,8 @@ sudo apt-get --yes --force-yes install terminator
 echo -e "\n\e[96m === Installation of Google Chromium as second browser ===\e[0m"
 sudo apt-get --yes --force-yes install chromium-browser
 
-echo -e "\n\e[96m === Some tools for debugging networking and memory issues ===\e[0m"
-sudo apt-get --yes --force-yes install htop dstat
+echo -e "\n\e[96m === Some tools for debugging networking, file changes and memory issues ===\e[0m"
+sudo apt-get --yes --force-yes install htop dstat meld
 
 echo -e "\n\e[96m === we are done! Have fun coding! ===\e[0m"
 
