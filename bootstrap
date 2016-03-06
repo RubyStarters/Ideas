@@ -45,7 +45,7 @@ rvm install ruby-2.3
 # We install bundler, 
 rvm use 2.1
 # .. latest Rails 3, ...
-gem2.1 install rails:'<4'
+gem install rails:'<4'
 # ... database support for SQLite, PostgresQL and MySQL, ...
 gem install bundler sqlite3 pg mysql2 
 # ... devise (authorization gem) and paperclip (attachment upload gem)
@@ -54,14 +54,14 @@ gem install devise paperclip
 # The same for Ruby 2.2, ...
 rvm use 2.2
 # .. but with latest Rails 4.
-gem2.1 install rails:'<4'
+gem install rails:'<4'
 gem install bundler sqlite3 pg mysql2 
 gem install devise paperclip
 
 # And one more time with Ruby 2.3, ...
 rvm use 2.3
 # .. but with latest Rails 5.
-gem2.1 install rails -v "5.0.0.beta2"
+gem install rails -v "5.0.0.beta2"
 gem install bundler sqlite3 pg mysql2 
 gem install devise paperclip
 
