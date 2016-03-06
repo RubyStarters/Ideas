@@ -1,10 +1,10 @@
 #! /bin/bash
 # The line above tells this script to be interpreted as a bash script when run from the command line.
 
-# Make sure, we can add extra repositories
+echo"\e[96m Make sure, we can add extra repositories ==="
 sudo apt-get --yes --force-yes install software-properties-common
 
-# Add repository for Zeal documentation browser
+echo"\e[96m ===  Add repository for Zeal documentation browser ==="
 sudo add-apt-repository ppa:zeal-developers/ppa
 
 # Add repository for Atom editor
