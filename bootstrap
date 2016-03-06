@@ -94,7 +94,7 @@ sudo apt-get --yes --force-yes install zeal
 echo -e "\n\e[96m === Let's install Atom editor ===\e[0m"
 sudo apt-get --yes --force-yes install atom
 sudo apm install color-picker rails-snippets rails-finder rails-rspec go-to-definition-rails go-to-view merge-conflicts
-sudo apm install git-diff-details minimap
+sudo apm install minimap
 
 echo -e "\n\e[96m === Terminator is a way more powerfull terminal applicaton ===\e[0m"
 sudo apt-get --yes --force-yes install terminator
