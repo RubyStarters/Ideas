@@ -21,16 +21,15 @@ sudo ufw enable
 
 # Ruby prerequesites and tools: Bash, Curl, C Compiler, and several libraries to be able to install gems later
 sudo apt-get --yes --force-yes install bash curl build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
-sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libxml2-dev curl 
+sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libxml2-dev curl libffi-dev libgmp3-dev
 sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libreadline5 libltdl-dev
 sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config 
-sudo apt-get --yes --force-yes install libffi-dev libgmp3-dev libpq-dev 
 
 # SQLite database management system plus client
 sudo apt-get --yes --force-yes install libsqlite3-dev sqlite3
 
 # PostgresQL database management system plus client
-sudo apt-get --yes --force-yes install postgresql-client postgresql postgresql-contrib pgadmin3
+sudo apt-get --yes --force-yes install postgresql-client postgresql postgresql-contrib pgadmin3 libpq-dev
 
 # Let's install Apache and OpenSSH-Server, if we want to share data
 sudo apt-get --yes --force-yes install apache2 openssh-server 
