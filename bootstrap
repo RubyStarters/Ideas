@@ -50,7 +50,7 @@ sudo gem2.3 install bundler
 # Let's install Rails 3,4,5 in Ruby 2.1, 2.2, 2.3 respectively
 sudo gem2.1 install rails:'<4'
 sudo gem2.2 install rails:'<5'
-sudo gem2.3 install rails:'5.0.0.beta2'
+sudo gem2.3 install rails -v 5.0.0.beta2
 
 # Let's install database support for SQLite, PostgresQL and MySQL
 sudo gem2.1 install sqlite3 pg mysql2
