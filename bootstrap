@@ -60,23 +60,26 @@ rvm install ruby-2.3
 echo -e "\n\e[96m === For Ruby 2.1: ===\e[0m"
 rvm use 2.1
 echo -e "\n\e[96m ===  .. We install bundler, latest Rails 3, ... ===\e[0m"
-gem install bundler rails:'<4'
+gem query -i -n bundler || gem install bundler 
+gem query -i -n rails || gem install rails:'<4'
 echo -e "\n\e[96m === ... database support for SQLite, PostgresQL and MySQL, ... ===\e[0m"
-gem install  sqlite3 pg mysql2 
+gem install sqlite3 pg mysql2 
 echo -e "\n\e[96m ===  ... devise (authorization gem) and paperclip (attachment upload gem) ===\e[0m"
 gem install devise paperclip
 
 echo -e "\n\e[96m ===  The same for Ruby 2.2, ... ===\e[0m"
 rvm use 2.2
 echo -e "\n\e[96m === .. but with latest Rails 4. ===\e[0m"
-gem install bundler rails:'<5'
+gem query -i -n bundler || gem install bundler 
+gem query -i -n rails || gem install rails:'<5'
 gem install sqlite3 pg mysql2 
 gem install devise paperclip
 
 echo -e "\n\e[96m === And one more time with Ruby 2.3, ... ===\e[0m"
 rvm use 2.3
 echo -e "\n\e[96m ===  .. but with latest Rails 5. ===\e[0m"
-gem install bundler rails -v "5.0.0.beta2"
+gem query -i -n bundler || gem install bundler 
+gem query -i -n rails || gem install rails -v "5.0.0.beta2"
 gem install sqlite3 pg mysql2 
 gem install devise paperclip
 
