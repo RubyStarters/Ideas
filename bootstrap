@@ -1,6 +1,9 @@
 #! /bin/bash
 # The line above tells this script to be interpreted as a bash script when run from the command line.
 
+echo -e "\n\e[96m === We alias 'update' to download and run this particular script ===\e[0m"
+grep -q -F 'sudo apt-get update && sudo apt-get dist-upgrade' ~/.bashrc || echo "alias update='sudo apt-get update && sudo apt-get dist-upgrade'" >> ~/.bashrc
+
 echo -e "\n\e[96m === Make sure, we can add extra repositories ===\e[0m"
 sudo apt-get --yes --force-yes install software-properties-common
 
