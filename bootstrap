@@ -15,7 +15,7 @@ sudo add-apt-repository ppa:sonic-pi/ppa
 
 echo -e "\n\e[96m === Add repository for Crystal ===\e[0m"
 sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
-sudo echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d/crystal.list
+sudo su -c 'echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d/crystal.list'
 
 echo -e "\n\e[96m === Update of package information ===\e[0m"
 sudo apt-get update
