@@ -1,3 +1,5 @@
 cd ~/.local/share/Zeal/Zeal/docsets
 wget http://london.kapeli.com/feeds/Ruby_on_Rails_3.tgz
 tar -xvzf Ruby_on_Rails_3.tgz
+mv "Ruby on Rails.docset" "Ruby on Rails 3.docset"
+rm Ruby_on_Rails_3.tgz
