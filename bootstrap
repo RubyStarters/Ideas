@@ -98,8 +98,8 @@ gem query -i -n pg || gem install pg
 gem query -i -n mysql2 || gem install mysql2 
 
 echo -e "\n\e[96m === Let's install Zeal and a sane amount of documentation ===\e[0m"
-# well, if I only knew how to install docsets from the console ...
 sudo apt-get --yes --force-yes install zeal
+wget -O - https://raw.githubusercontent.com/RubyStarters/Ideas/master/zeal-docsets | bash
 
 echo -e "\n\e[96m === Let's install Atom editor with some Rails specific packages ===\e[0m"
 sudo apt-get --yes --force-yes install atom
