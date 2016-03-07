@@ -4,7 +4,7 @@
 echo -e "\n\e[96m === Downloading Docsets ... ===\e[0m"
 cd ~/.local/share/Zeal/Zeal/docsets
 
-if [ -d "~/.local/share/Zeal/Zeal/docsets/Ruby on Rails 3.docset" ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 3.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 3 already installed ===\e[0m"
   else
@@ -15,7 +15,7 @@ if [ -d "~/.local/share/Zeal/Zeal/docsets/Ruby on Rails 3.docset" ]
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_3.tgz
 fi
 
-if [ -d "~/.local/share/Zeal/Zeal/docsets/Ruby on Rails 4.docset" ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 4.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 4 already installed ===\e[0m"
   else
@@ -26,7 +26,7 @@ if [ -d "~/.local/share/Zeal/Zeal/docsets/Ruby on Rails 4.docset" ]
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_4.tgz
 fi
 
-if [ -d "~/.local/share/Zeal/Zeal/docsets/Ruby on Rails 5.docset" ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 5 already installed ===\e[0m"
   else
