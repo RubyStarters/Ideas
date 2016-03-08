@@ -77,14 +77,14 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/CSS.docset ]
     rm ~/.local/share/Zeal/Zeal/docsets/CSS.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby_2.docset ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ 2.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Ruby_2 already installed ===\e[0m"
   else
     echo -e "\n\e[96m === ... docsets for Ruby_2 ===\e[0m"
     wget http://london.kapeli.com/feeds/Ruby_2.tgz
     tar -xvzf Ruby_2.tgz
-    mv "Ruby.docset" "Ruby_2.docset"
+    mv "Ruby.docset" "Ruby 2.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_2.tgz
 fi
 
@@ -218,7 +218,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Foundation.docset ]
     rm ~/.local/share/Zeal/Zeal/docsets/Foundation.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic_UI.docset ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic\ UI.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Semantic_UI already installed ===\e[0m"
   else
