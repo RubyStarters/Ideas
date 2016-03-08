@@ -84,6 +84,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby_2.docset ]
     echo -e "\n\e[96m === ... docsets for Ruby_2 ===\e[0m"
     wget http://london.kapeli.com/feeds/Ruby_2.tgz
     tar -xvzf Ruby_2.tgz
+    mv "Ruby.docset" "Ruby_2.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_2.tgz
 fi
 
