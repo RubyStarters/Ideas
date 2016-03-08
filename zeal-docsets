@@ -219,7 +219,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Foundation.docset ]
     rm ~/.local/share/Zeal/Zeal/docsets/Foundation.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic\ UI.docset ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic\ UI.docset/Content ]
   then
     echo -e "\n\e[96m === ... docsets for Semantic_UI already installed ===\e[0m"
   else
