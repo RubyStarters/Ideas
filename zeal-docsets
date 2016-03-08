@@ -12,7 +12,7 @@ if [ ! -d .git ]
 fi
 git pull origin master
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 3.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 3.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 3 already installed ===\e[0m"
   else
@@ -23,7 +23,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 3.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_3.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 4.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 4.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 4 already installed ===\e[0m"
   else
@@ -34,7 +34,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 4.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_4.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 5 already installed ===\e[0m"
   else
@@ -45,7 +45,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_5.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Bash.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Bash.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Bash already installed ===\e[0m"
   else
@@ -55,7 +55,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Bash.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Bash.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/HTML.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/HTML.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for HTML already installed ===\e[0m"
   else
@@ -65,7 +65,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/HTML.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/HTML.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/JavaScript.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/JavaScript.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for JavaScript already installed ===\e[0m"
   else
@@ -75,7 +75,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/JavaScript.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/JavaScript.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/CSS.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/CSS.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for CSS already installed ===\e[0m"
   else
@@ -85,7 +85,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/CSS.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/CSS.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ 2.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ 2.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Ruby_2 already installed ===\e[0m"
   else
@@ -96,7 +96,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ 2.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_2.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/SQLite.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/SQLite.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for SQLite already installed ===\e[0m"
   else
@@ -106,7 +106,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/SQLite.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/SQLite.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/MySQL.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/MySQL.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for MySQL already installed ===\e[0m"
   else
@@ -116,7 +116,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/MySQL.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/MySQL.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for PostgreSQL already installed ===\e[0m"
   else
@@ -126,7 +126,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Bootstrap\ 3.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Bootstrap\ 3.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Bootstrap_3 already installed ===\e[0m"
   else
@@ -137,7 +137,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Bootstrap\ 3.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Bootstrap_3.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/CoffeeScript.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/CoffeeScript.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for CoffeeScript already installed ===\e[0m"
   else
@@ -147,7 +147,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/CoffeeScript.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/CoffeeScript.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Haml.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Haml.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Haml already installed ===\e[0m"
   else
@@ -157,7 +157,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Haml.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Haml.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Jekyll.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Jekyll.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Jekyll already installed ===\e[0m"
   else
@@ -167,7 +167,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Jekyll.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Jekyll.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Less.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Less.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Less already installed ===\e[0m"
   else
@@ -177,7 +177,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Less.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Less.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Apache_HTTP_Server.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Apache_HTTP_Server.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Apache_HTTP_Server already installed ===\e[0m"
   else
@@ -187,7 +187,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Apache_HTTP_Server.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Apache_HTTP_Server.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Markdown.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Markdown.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Markdown already installed ===\e[0m"
   else
@@ -197,7 +197,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Markdown.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Markdown.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Sass.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Sass.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Sass already installed ===\e[0m"
   else
@@ -207,7 +207,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Sass.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Sass.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Font_Awesome.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Font_Awesome.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Font_Awesome already installed ===\e[0m"
   else
@@ -217,7 +217,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Font_Awesome.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Font_Awesome.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Foundation.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Foundation.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Foundation already installed ===\e[0m"
   else
@@ -227,7 +227,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Foundation.docset/Content ]
     rm ~/.local/share/Zeal/Zeal/docsets/Foundation.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic\ UI.docset/Content ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic\ UI.docset/Contents ]
   then
     echo -e "\n\e[96m === ... docsets for Semantic_UI already installed ===\e[0m"
   else
