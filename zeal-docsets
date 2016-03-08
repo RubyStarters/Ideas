@@ -36,3 +36,193 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset ]
     mv "Ruby on Rails.docset" "Ruby on Rails 5.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_5.tgz
 fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Bash.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Bash already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Bash ===\e[0m"
+    wget http://london.kapeli.com/feeds/Bash.tgz
+    tar -xvzf Bash.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Bash.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/HTML.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for HTML already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for HTM L===\e[0m"
+    wget http://london.kapeli.com/feeds/HTML.tgz
+    tar -xvzf HTML.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/HTML.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/JavaScript.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for JavaScript already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for JavaScript ===\e[0m"
+    wget http://london.kapeli.com/feeds/JavaScript.tgz
+    tar -xvzf JavaScript.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/JavaScript.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/CSS.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for CSS already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for CSS ===\e[0m"
+    wget http://london.kapeli.com/feeds/CSS.tgz
+    tar -xvzf CSS.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/CSS.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby_2.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Ruby_2 already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Ruby_2 ===\e[0m"
+    wget http://london.kapeli.com/feeds/Ruby_2.tgz
+    tar -xvzf Ruby_2.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Ruby_2.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/SQLite.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for SQLite already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for SQLite ===\e[0m"
+    wget http://london.kapeli.com/feeds/SQLite.tgz
+    tar -xvzf SQLite.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/SQLite.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/MySQL.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for MySQL already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for MySQL ===\e[0m"
+    wget http://london.kapeli.com/feeds/MySQL.tgz
+    tar -xvzf MySQL.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/MySQL.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for PostgreSQL already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for PostgreSQL ===\e[0m"
+    wget http://london.kapeli.com/feeds/PostgreSQL.tgz
+    tar -xvzf PostgreSQL.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Bootstrap_3.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Bootstrap_3 already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Bootstrap_3 ===\e[0m"
+    wget http://london.kapeli.com/feeds/Bootstrap_3.tgz
+    tar -xvzf Bootstrap_3.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Bootstrap_3.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/CoffeeScript.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for CoffeeScript already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for CoffeeScript ===\e[0m"
+    wget http://london.kapeli.com/feeds/CoffeeScript.tgz
+    tar -xvzf CoffeeScript.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/CoffeeScript.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Haml.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Haml already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Haml ===\e[0m"
+    wget http://london.kapeli.com/feeds/Haml.tgz
+    tar -xvzf Haml.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Haml.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Jekyll.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Jekyll already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Jekyll ===\e[0m"
+    wget http://london.kapeli.com/feeds/Jekyll.tgz
+    tar -xvzf Jekyll.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Jekyll.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Less.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Less already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Less ===\e[0m"
+    wget http://london.kapeli.com/feeds/Less.tgz
+    tar -xvzf Less.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Less.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Apache_HTTP_Server.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Apache_HTTP_Server already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Apache_HTTP_Server ===\e[0m"
+    wget http://london.kapeli.com/feeds/Apache_HTTP_Server.tgz
+    tar -xvzf Apache_HTTP_Server.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Apache_HTTP_Server.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Markdown.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Markdown already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Markdown ===\e[0m"
+    wget http://london.kapeli.com/feeds/Markdown.tgz
+    tar -xvzf Markdown.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Markdown.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Sass.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Sass already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Sass ===\e[0m"
+    wget http://london.kapeli.com/feeds/Sass.tgz
+    tar -xvzf Sass.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Sass.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Font_Awesome.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Font_Awesome already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Font_Awesome ===\e[0m"
+    wget http://london.kapeli.com/feeds/Font_Awesome.tgz
+    tar -xvzf Font_Awesome.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Font_Awesome.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Foundation.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Foundation already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Foundation ===\e[0m"
+    wget http://london.kapeli.com/feeds/Foundation.tgz
+    tar -xvzf Foundation.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Foundation.tgz
+fi
+
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic_UI.docset ]
+  then
+    echo -e "\n\e[96m === ... docsets for Semantic_UI already installed ===\e[0m"
+  else
+    echo -e "\n\e[96m === ... docsets for Semantic_UI ===\e[0m"
+    wget http://london.kapeli.com/feeds/Semantic_UI.tgz
+    tar -xvzf Semantic_UI.tgz
+    rm ~/.local/share/Zeal/Zeal/docsets/Semantic_UI.tgz
+fi
