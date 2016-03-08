@@ -118,13 +118,14 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.docset ]
     rm ~/.local/share/Zeal/Zeal/docsets/PostgreSQL.tgz
 fi
 
-if [ -d ~/.local/share/Zeal/Zeal/docsets/Bootstrap_3.docset ]
+if [ -d ~/.local/share/Zeal/Zeal/docsets/Bootstrap\ 3.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Bootstrap_3 already installed ===\e[0m"
   else
     echo -e "\n\e[96m === ... docsets for Bootstrap_3 ===\e[0m"
     wget http://london.kapeli.com/feeds/Bootstrap_3.tgz
     tar -xvzf Bootstrap_3.tgz
+    mv "Bootstrap_3.docset" "Bootstrap 3.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Bootstrap_3.tgz
 fi
 
