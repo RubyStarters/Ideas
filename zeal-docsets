@@ -51,7 +51,7 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/HTML.docset ]
   then
     echo -e "\n\e[96m === ... docsets for HTML already installed ===\e[0m"
   else
-    echo -e "\n\e[96m === ... docsets for HTM L===\e[0m"
+    echo -e "\n\e[96m === ... docsets for HTML ===\e[0m"
     wget http://london.kapeli.com/feeds/HTML.tgz
     tar -xvzf HTML.tgz
     rm ~/.local/share/Zeal/Zeal/docsets/HTML.tgz
