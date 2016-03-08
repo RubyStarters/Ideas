@@ -4,6 +4,11 @@
 echo -e "\n\e[96m === Downloading Docsets ... ===\e[0m"
 cd ~/.local/share/Zeal/Zeal/docsets
 
+echo -e "\n\e[96m === Downloading icons and metadata ===\e[0m"
+git init
+git remote add origin https://github.com/RubyStarters/zeal_metadata.git
+git pull origin master
+
 if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 3.docset ]
   then
     echo -e "\n\e[96m === ... docsets for Rails 3 already installed ===\e[0m"
