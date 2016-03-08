@@ -19,8 +19,9 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 3.docset/Contents ]
     echo -e "\n\e[96m === ... docsets for Rails 3 ===\e[0m"
     wget http://london.kapeli.com/feeds/Ruby_on_Rails_3.tgz
     tar -xvzf Ruby_on_Rails_3.tgz
-    mv "Ruby on Rails.docset" "Ruby on Rails 3.docset"
+    mv "Ruby on Rails.docset/Contents" "Ruby on Rails 3.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_3.tgz
+    rmdir "Ruby on Rails.docset"
 fi
 
 if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 4.docset/Contents ]
@@ -30,8 +31,9 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 4.docset/Contents ]
     echo -e "\n\e[96m === ... docsets for Rails 4 ===\e[0m"
     wget http://london.kapeli.com/feeds/Ruby_on_Rails_4.tgz
     tar -xvzf Ruby_on_Rails_4.tgz
-    mv "Ruby on Rails.docset" "Ruby on Rails 4.docset"
+    mv "Ruby on Rails.docset/Contents" "Ruby on Rails 4.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_4.tgz
+    rmdir "Ruby on Rails.docset"
 fi
 
 if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset/Contents ]
@@ -41,8 +43,9 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ on\ Rails\ 5.docset/Contents ]
     echo -e "\n\e[96m === ... docsets for Rails 5 ===\e[0m"
     wget http://london.kapeli.com/feeds/Ruby_on_Rails_5.tgz
     tar -xvzf Ruby_on_Rails_5.tgz
-    mv "Ruby on Rails.docset" "Ruby on Rails 5.docset"
+    mv "Ruby on Rails.docset/Contents" "Ruby on Rails 5.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_on_Rails_5.tgz
+    rmdir "Ruby on Rails.docset"
 fi
 
 if [ -d ~/.local/share/Zeal/Zeal/docsets/Bash.docset/Contents ]
@@ -92,8 +95,9 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Ruby\ 2.docset/Contents ]
     echo -e "\n\e[96m === ... docsets for Ruby_2 ===\e[0m"
     wget http://london.kapeli.com/feeds/Ruby_2.tgz
     tar -xvzf Ruby_2.tgz
-    mv "Ruby.docset" "Ruby 2.docset"
+    mv "Ruby.docset/Contents" "Ruby 2.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Ruby_2.tgz
+    rmdir "Ruby.docset"
 fi
 
 if [ -d ~/.local/share/Zeal/Zeal/docsets/SQLite.docset/Contents ]
