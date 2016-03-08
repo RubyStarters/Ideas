@@ -225,5 +225,6 @@ if [ -d ~/.local/share/Zeal/Zeal/docsets/Semantic_UI.docset ]
     echo -e "\n\e[96m === ... docsets for Semantic_UI ===\e[0m"
     wget http://london.kapeli.com/feeds/Semantic_UI.tgz
     tar -xvzf Semantic_UI.tgz
+    mv "Semantic_UI.docset" "Semantic UI.docset"
     rm ~/.local/share/Zeal/Zeal/docsets/Semantic_UI.tgz
 fi
