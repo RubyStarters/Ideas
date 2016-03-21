@@ -7,12 +7,6 @@ grep -q -F 'wget -O - https://raw.githubusercontent.com/RubyStarters/Ideas/maste
 echo -e "\n\e[96m === Make sure, we can add extra repositories ===\e[0m"
 sudo apt-get --yes --force-yes install software-properties-common
 
-echo -e "\n\e[96m ===  Add repository for Zeal documentation browser ===\e[0m"
-sudo add-apt-repository ppa:zeal-developers/ppa
-
-echo -e "\n\e[96m === Add repository for Atom editor ===\e[0m"
-sudo add-apt-repository ppa:webupd8team/atom
-
 echo -e "\n\e[96m === Add repository for Sonic Pi ===\e[0m"
 sudo add-apt-repository ppa:sonic-pi/ppa
 
@@ -44,9 +38,6 @@ sudo apt-get --yes --force-yes install postgresql-client postgresql postgresql-c
 echo -e "\n\e[96m === Let's install Apache and OpenSSH-Server, if we want to share data ===\e[0m"
 sudo apt-get --yes --force-yes install apache2 openssh-server 
 
-echo -e "\n\e[96m === MYSQL database management system and client ===\e[0m"
-sudo apt-get --yes --force-yes install mysql-client libmysqlclient-dev mysql-server phpmyadmin
-
 echo -e "\n\e[96m === Git alongside a GUI application for it ===\e[0m"
 sudo apt-get --yes --force-yes install git git-core gitg 
 
@@ -63,21 +54,9 @@ echo -e "\n\e[96m === Furthermore we need to load it on the fly ===\e[0m"
 source /home/$(whoami)/.rvm/scripts/rvm
 
 echo -e "\n\e[96m === Let's install Ruby 2.1, 2.2 and 2.3 ===\e[0m"
-rvm install ruby-2.1
 rvm install ruby-2.2
-rvm install ruby-2.3
 
-echo -e "\n\e[96m === For Ruby 2.1: ===\e[0m"
-rvm --default use 2.1
-echo -e "\n\e[96m ===  .. We install bundler, latest Rails 3, ... ===\e[0m"
-gem query -i -n bundler || gem install bundler 
-gem query -i -n rails || gem install rails:'<4'
-echo -e "\n\e[96m === ... database support for SQLite, PostgresQL and MySQL, ... ===\e[0m"
-gem query -i -n sqlite3 || gem install sqlite3 
-gem query -i -n pg || gem install pg 
-gem query -i -n mysql2 || gem install mysql2 
-
-echo -e "\n\e[96m ===  The same for Ruby 2.2, ... ===\e[0m"
+echo -e "\n\e[96m === For Ruby 2.2: ===\e[0m"
 rvm --default use 2.2
 echo -e "\n\e[96m === .. but with latest Rails 4. ===\e[0m"
 gem query -i -n bundler || gem install bundler 
@@ -87,30 +66,6 @@ gem query -i -n pg || gem install pg
 gem query -i -n mysql2 || gem install mysql2 
 gem query -i -n devise || gem install devise
 gem query -i -n paperclip || gem install paperclip
-
-echo -e "\n\e[96m === And one more time with Ruby 2.3, ... ===\e[0m"
-rvm --default use 2.3
-echo -e "\n\e[96m ===  .. but with latest Rails 5. ===\e[0m"
-gem query -i -n bundler || gem install bundler 
-gem query -i -n rails || gem install rails -v "5.0.0.beta2"
-gem query -i -n sqlite3 || gem install sqlite3 
-gem query -i -n pg || gem install pg 
-gem query -i -n mysql2 || gem install mysql2 
-
-echo -e "\n\e[96m === Let's install Zeal and a sane amount of documentation ===\e[0m"
-sudo apt-get --yes --force-yes install zeal
-wget -O - https://raw.githubusercontent.com/RubyStarters/Ideas/master/zeal-docsets | bash
-
-echo -e "\n\e[96m === Let's install Atom editor with some Rails specific packages ===\e[0m"
-sudo apt-get --yes --force-yes install atom
-sudo apm list -i | grep color-picker || sudo apm install color-picker 
-sudo apm list -i | grep rails-snippets || sudo apm install rails-snippets 
-sudo apm list -i | grep rails-finder || sudo apm install rails-finder 
-sudo apm list -i | grep rails-rspec || sudo apm install rails-rspec 
-sudo apm list -i | grep go-to-definition-rails || sudo apm install go-to-definition-rails 
-sudo apm list -i | grep go-to-view || sudo apm install go-to-view 
-sudo apm list -i | grep merge-conflicts || sudo apm install merge-conflicts
-sudo apm list -i | grep minimap || sudo apm install minimap
 
 echo -e "\n\e[96m === Terminator is a way more powerfull terminal applicaton ===\e[0m"
 sudo apt-get --yes --force-yes install terminator
