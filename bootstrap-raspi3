@@ -62,7 +62,6 @@ gem query -i -n bundler || gem install bundler
 gem query -i -n rails || gem install rails:'<5'
 gem query -i -n sqlite3 || gem install sqlite3 
 gem query -i -n pg || gem install pg 
-gem query -i -n mysql2 || gem install mysql2 
 gem query -i -n devise || gem install devise
 gem query -i -n paperclip || gem install paperclip
 
