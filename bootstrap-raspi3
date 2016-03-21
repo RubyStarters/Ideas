@@ -10,10 +10,6 @@ sudo apt-get --yes --force-yes install software-properties-common
 echo -e "\n\e[96m === Add repository for Sonic Pi ===\e[0m"
 sudo add-apt-repository ppa:sonic-pi/ppa
 
-echo -e "\n\e[96m === Add repository for Crystal ===\e[0m"
-sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
-sudo su -c 'echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d/crystal.list'
-
 echo -e "\n\e[96m === Update of package information ===\e[0m"
 sudo apt-get update
 
@@ -28,6 +24,9 @@ sudo apt-get --yes --force-yes install bash curl build-essential bison openssl l
 sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libxml2-dev curl libffi-dev libgmp3-dev
 sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libreadline5 libltdl-dev
 sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config 
+
+echo -e "\n\e[96m === Geany and Gedit are two editors / IDEs, that can handle Ruby well ===\e[0m"
+sudo apt-get --yes --force-yes install gedit geany
 
 echo -e "\n\e[96m === SQLite database management system plus client ===\e[0m"
 sudo apt-get --yes --force-yes install libsqlite3-dev sqlite3
@@ -78,9 +77,6 @@ sudo apt-get --yes --force-yes install htop dstat meld
 
 echo -e "\n\e[96m === Sonic Pi ===\e[0m"
 sudo apt-get --yes --force-yes install sonic-pi
-
-echo -e "\n\e[96m === Not quite Ruby, but almost the same syntax and way faster, because compiled is Crystal-Lang ===\e[0m"
-sudo apt-get --yes --force-yes install crystal
 
 echo -e "\n\e[96m === Clear package caches ===\e[0m"
 sudo apt-get clean
