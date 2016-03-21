@@ -1,0 +1,136 @@
+#! /bin/bash
+# The line above tells this script to be interpreted as a bash script when run from the command line.
+
+echo -e "\n\e[96m === We alias 'update' to download and run this particular script ===\e[0m"
+grep -q -F 'wget -O - https://raw.githubusercontent.com/RubyStarters/Ideas/master/bootstrap | bash' ~/.bashrc || echo "alias update='wget -O - https://raw.githubusercontent.com/RubyStarters/Ideas/master/bootstrap | bash'" >> ~/.bashrc
+
+echo -e "\n\e[96m === Make sure, we can add extra repositories ===\e[0m"
+sudo apt-get --yes --force-yes install software-properties-common
+
+echo -e "\n\e[96m ===  Add repository for Zeal documentation browser ===\e[0m"
+sudo add-apt-repository ppa:zeal-developers/ppa
+
+echo -e "\n\e[96m === Add repository for Atom editor ===\e[0m"
+sudo add-apt-repository ppa:webupd8team/atom
+
+echo -e "\n\e[96m === Add repository for Sonic Pi ===\e[0m"
+sudo add-apt-repository ppa:sonic-pi/ppa
+
+echo -e "\n\e[96m === Add repository for Crystal ===\e[0m"
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
+sudo su -c 'echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d/crystal.list'
+
+echo -e "\n\e[96m === Update of package information ===\e[0m"
+sudo apt-get update
+
+echo -e "\n\e[96m === Update all installed packages to ensure all security updates are obtained ===\e[0m"
+sudo apt-get --yes --force-yes dist-upgrade
+
+echo -e "\n\e[96m === We enable the firewall, because we will install server applications afterwards ===\e[0m"
+sudo ufw enable
+
+echo -e "\n\e[96m === Ruby prerequesites and tools: Bash, Curl, C Compiler, and several libraries to be able to install gems later ===\e[0m"
+sudo apt-get --yes --force-yes install bash curl build-essential bison openssl libreadline6 libreadline6-dev zlib1g 
+sudo apt-get --yes --force-yes install zlib1g-dev libssl-dev libsqlite3-0 libxml2-dev curl libffi-dev libgmp3-dev
+sudo apt-get --yes --force-yes install libyaml-dev libxslt-dev autoconf libreadline5 libltdl-dev
+sudo apt-get --yes --force-yes install libncurses5-dev libserf1-dbg libsvn1 libtool subversion libgdbm-dev pkg-config 
+
+echo -e "\n\e[96m === SQLite database management system plus client ===\e[0m"
+sudo apt-get --yes --force-yes install libsqlite3-dev sqlite3
+
+echo -e "\n\e[96m === PostgresQL database management system plus client ===\e[0m"
+sudo apt-get --yes --force-yes install postgresql-client postgresql postgresql-contrib pgadmin3 libpq-dev
+
+echo -e "\n\e[96m === Let's install Apache and OpenSSH-Server, if we want to share data ===\e[0m"
+sudo apt-get --yes --force-yes install apache2 openssh-server 
+
+echo -e "\n\e[96m === MYSQL database management system and client ===\e[0m"
+sudo apt-get --yes --force-yes install mysql-client libmysqlclient-dev mysql-server phpmyadmin
+
+echo -e "\n\e[96m === Git alongside a GUI application for it ===\e[0m"
+sudo apt-get --yes --force-yes install git git-core gitg 
+
+echo -e "\n\e[96m === We install rvm by first installing their public ssh-key ... ===\e[0m"
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+echo -e "\n\e[96m === ... and then rvm itself  ===\e[0m"
+\curl -sSL https://get.rvm.io | bash
+
+echo -e "\n\e[96m === Some Ubuntu flavours need more help sourcing rvm from terminals, but only if it's not already there  ===\e[0m"
+grep -q -F '/.rvm/scripts/rvm' ~/.bashrc || echo "source /home/$(whoami)/.rvm/scripts/rvm" >> ~/.bashrc
+
+echo -e "\n\e[96m === Furthermore we need to load it on the fly ===\e[0m"
+source /home/$(whoami)/.rvm/scripts/rvm
+
+echo -e "\n\e[96m === Let's install Ruby 2.1, 2.2 and 2.3 ===\e[0m"
+rvm install ruby-2.1
+rvm install ruby-2.2
+rvm install ruby-2.3
+
+echo -e "\n\e[96m === For Ruby 2.1: ===\e[0m"
+rvm --default use 2.1
+echo -e "\n\e[96m ===  .. We install bundler, latest Rails 3, ... ===\e[0m"
+gem query -i -n bundler || gem install bundler 
+gem query -i -n rails || gem install rails:'<4'
+echo -e "\n\e[96m === ... database support for SQLite, PostgresQL and MySQL, ... ===\e[0m"
+gem query -i -n sqlite3 || gem install sqlite3 
+gem query -i -n pg || gem install pg 
+gem query -i -n mysql2 || gem install mysql2 
+
+echo -e "\n\e[96m ===  The same for Ruby 2.2, ... ===\e[0m"
+rvm --default use 2.2
+echo -e "\n\e[96m === .. but with latest Rails 4. ===\e[0m"
+gem query -i -n bundler || gem install bundler 
+gem query -i -n rails || gem install rails:'<5'
+gem query -i -n sqlite3 || gem install sqlite3 
+gem query -i -n pg || gem install pg 
+gem query -i -n mysql2 || gem install mysql2 
+gem query -i -n devise || gem install devise
+gem query -i -n paperclip || gem install paperclip
+
+echo -e "\n\e[96m === And one more time with Ruby 2.3, ... ===\e[0m"
+rvm --default use 2.3
+echo -e "\n\e[96m ===  .. but with latest Rails 5. ===\e[0m"
+gem query -i -n bundler || gem install bundler 
+gem query -i -n rails || gem install rails -v "5.0.0.beta2"
+gem query -i -n sqlite3 || gem install sqlite3 
+gem query -i -n pg || gem install pg 
+gem query -i -n mysql2 || gem install mysql2 
+
+echo -e "\n\e[96m === Let's install Zeal and a sane amount of documentation ===\e[0m"
+sudo apt-get --yes --force-yes install zeal
+wget -O - https://raw.githubusercontent.com/RubyStarters/Ideas/master/zeal-docsets | bash
+
+echo -e "\n\e[96m === Let's install Atom editor with some Rails specific packages ===\e[0m"
+sudo apt-get --yes --force-yes install atom
+sudo apm list -i | grep color-picker || sudo apm install color-picker 
+sudo apm list -i | grep rails-snippets || sudo apm install rails-snippets 
+sudo apm list -i | grep rails-finder || sudo apm install rails-finder 
+sudo apm list -i | grep rails-rspec || sudo apm install rails-rspec 
+sudo apm list -i | grep go-to-definition-rails || sudo apm install go-to-definition-rails 
+sudo apm list -i | grep go-to-view || sudo apm install go-to-view 
+sudo apm list -i | grep merge-conflicts || sudo apm install merge-conflicts
+sudo apm list -i | grep minimap || sudo apm install minimap
+
+echo -e "\n\e[96m === Terminator is a way more powerfull terminal applicaton ===\e[0m"
+sudo apt-get --yes --force-yes install terminator
+
+echo -e "\n\e[96m === Installation of Google Chromium as second browser ===\e[0m"
+sudo apt-get --yes --force-yes install chromium-browser
+
+echo -e "\n\e[96m === Some tools for debugging networking, file changes and memory issues ===\e[0m"
+sudo apt-get --yes --force-yes install htop dstat meld
+
+echo -e "\n\e[96m === Sonic Pi ===\e[0m"
+sudo apt-get --yes --force-yes install sonic-pi
+
+echo -e "\n\e[96m === Not quite Ruby, but almost the same syntax and way faster, because compiled is Crystal-Lang ===\e[0m"
+sudo apt-get --yes --force-yes install crystal
+
+echo -e "\n\e[96m === Clear package caches ===\e[0m"
+sudo apt-get clean
+sudo apt-get autoclean
+
+echo -e "\n\e[96m === We are done! Have fun coding! ===\e[0m"
+
+# echo -e "\n\e[96m ===  ===\e[0m"
