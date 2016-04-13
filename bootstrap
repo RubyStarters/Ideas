@@ -127,6 +127,9 @@ sudo apt-get --yes --force-yes install sonic-pi
 echo -e "\n\e[96m === Not quite Ruby, but almost the same syntax and way faster, because compiled is Crystal-Lang ===\e[0m"
 sudo apt-get --yes --force-yes install crystal
 
+echo -e "\n\e[96m === Node JS ===\e[0m"
+sudo apt-get --yes --force-yes install sonic-pi
+
 echo -e "\n\e[96m === Clear package caches ===\e[0m"
 sudo apt-get clean
 sudo apt-get autoclean
